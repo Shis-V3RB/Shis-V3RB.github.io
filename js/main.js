@@ -18,7 +18,7 @@
     	$("#loader").fadeOut("slow", function(){
 
         // will fade out the whole DIV that covers the website.
-        $("#preloader").delay(45).fadeOut("slow");
+        $("#preloader").delay(65).fadeOut("slow");
 
       });       
 
@@ -41,26 +41,13 @@
   	$(".fluid-video-wrapper").fitVids();
 
 
-	/*---------------------------------------------------- */
-	/* Owl Carousel
-	------------------------------------------------------ */ 
-	$("#owl-slider").owlCarousel({
-        navigation: false,
-        pagination: true,
-        itemsCustom : [
-	        [0, 1],
-	        [700, 2],
-	        [960, 3]
-	     ],
-        navigationText: false
-    });
 
 
 	/*----------------------------------------------------- */
 	/* Alert Boxes
   	------------------------------------------------------- */
 	$('.alert-box').on('click', '.close', function() {
-	  $(this).parent().fadeOut(500);
+	  $(this).parent().fadeOut(300);
 	});	
 
 
@@ -206,72 +193,13 @@
   	});  
   
 
-   /*---------------------------------------------------- */
-	/*  Placeholder Plugin Settings
-	------------------------------------------------------ */ 
-	$('input, textarea, select').placeholder()  
-
-/*   	/*---------------------------------------------------- */
-/*	contact form
------------------------------------------------------- */
-	/* local validation 
-	$('#contactForm').validate({
-
-		/* submit via ajax 
-		submitHandler: function(form) {
-
-			var sLoader = $('#submit-loader');
-
-			$.ajax({      	
-
-		      type: "POST",
-		      url: "inc/sendEmail.php",
-		      data: $(form).serialize(),
-		      beforeSend: function() { 
-
-		      	sLoader.fadeIn(); 
-
-		      },
-		      success: function(msg) {
-
-	            // Message was sent
-	            if (msg == 'OK') {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').hide();
-	               $('#contactForm').fadeOut();
-	               $('#message-success').fadeIn();   
-	            }
-	            // There was an error
-	            else {
-	            	sLoader.fadeOut(); 
-	               $('#message-warning').html(msg);
-		            $('#message-warning').fadeIn();
-	            }
-
-		      },
-		      error: function() {
-
-		      	sLoader.fadeOut(); 
-		      	$('#message-warning').html("Something went wrong. Please try again.");
-		         $('#message-warning').fadeIn();
-
-		      }
-
-	      });     		
-  		}
-
-	});
-
- */
-/*the upper js  we didnt leraned PHP for personal web */
- 	/*----------------------------------------------------- */
-  	
+   
 	 /* Back to top
    ------------------------------------------------------- */ 
 	var pxShow = 200; // height on which the button will show
-	var fadeInTime = 300; // how slow/fast you want the button to show
-	var fadeOutTime = 300; // how slow/fast you want the button to hide
-	var scrollSpeed = 300; // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
+	var fadeInTime = 200; // how slow/fast you want the button to show
+	var fadeOutTime = 200; // how slow/fast you want the button to hide
+	var scrollSpeed = 200; // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
 
    // Show or hide the sticky footer button
 	jQuery(window).scroll(function() {
